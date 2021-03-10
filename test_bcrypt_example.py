@@ -14,6 +14,7 @@ def test_static_html(client):
 
     rv = client.get('/')
     assert rv.status == "200 OK"
+    
     assert b'<title>Single-Page Login and Post</title>' in rv.data
 
 def test_signup_and_login(client):
