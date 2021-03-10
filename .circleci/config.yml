@@ -12,7 +12,10 @@ jobs:
       - python/install-deps
       - python/save-cache
       - run:
-          command: pytest -v 
+          command: pip install -r requirements.txt
+          name: Requirements
+      - run:
+          command: pytest -v
           name: Test
 
 workflows:
